@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>
+                <div>
+                    <img src="/../../static/images/store.png" alt="Logo" title="Logo" th:src="@{/images/store.png}"/>
+                </div>
+            </td>
+            <td>
+                <h2>One Store</h2>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+
+    <form action="#" th:action="@{/product}" th:object="${product}" method="post">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" th:field="*{name}" /></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input type="text" th:field="*{price}" /></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Add product</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <br />
+
+    <table>
+        <thead>
+            <tr>
+                <th th:text="Products">Name</th>
+            </tr>
+            <tr>
+                <th th:text="Name">Name</th>
+                <th th:text="Price">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${products}">
+                <td th:text="${product.name}"></td>
+                <td th:text="${product.price}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

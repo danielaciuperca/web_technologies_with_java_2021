@@ -1,0 +1,26 @@
+title Web aware bean scopes demo app
+
+participant User
+participant LoggingFilter
+participant ProductController
+participant ProductService
+participant ProductRepository
+participant ProductLoggingDetails
+participant ShoppingCart
+
+User->LoggingFilter:request POST /product
+LoggingFilter->ProductController:create()
+ProductController->ProductService:create()
+ProductService->ProductRepository:create()
+ProductService<-ProductRepository:
+ProductController<-ProductService:
+ProductController->ProductLoggingDetails: setProduct()
+ProductController<-ProductLoggingDetails:
+ProductController->ProductService: getAllProducts()
+ProductController<-ProductService:
+ProductController->ProductController: addProductsToModel()
+ProductController->ShoppingCart: addProduct()
+ProductController<-ShoppingCart:
+LoggingFilter<-ProductController:
+User<-LoggingFilter:response
+
