@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "7695f245-c074-42fa-9c42-08ded868828a",
+		"name": "Universitate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "bankAccounts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\" : \"987453289\",\r\n    \"balance\" : 1000,\r\n    \"type\" : \"DEBIT\",\r\n    \"cardNumber\" : \"4567125614890000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bankAccounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bankAccounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bankAccount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bankAccounts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bankAccounts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bankAccounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bankAccounts?type=SAVINGS&balance=7000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bankAccounts"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "SAVINGS"
+						},
+						{
+							"key": "balance",
+							"value": "7000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drivers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\" : \"John\",\r\n   \"email\" : \"john@gmail.com\",\r\n   \"city\" : \"Bucharest\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/drivers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drivers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trips",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"fromAddress\" : \"Codrii Neamtului 5\",\r\n   \"toAddress\" : \"AFI 3\",\r\n   \"driverId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trips",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trips",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"fromAddress\" : \"Codrii Neamtului 5\",\r\n   \"toAddress\" : \"AFI 3\",\r\n   \"driverId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trips?driverId=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trips"
+					],
+					"query": [
+						{
+							"key": "driverId",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drivers",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\" : \"John\",\r\n   \"email\" : \"john@gmail.com\",\r\n   \"city\" : \"Bucharest\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/drivers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drivers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "destinations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\" : \"Bali\",\r\n   \"country\" : \"Indonesia\",\r\n   \"destinationType\" : \"SEASIDE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/destinations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"destinations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "holidays",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accommodation\" : \"hotel\",\r\n    \"duration\" : 14,\r\n    \"transportation\" : \"plane\",\r\n    \"price\" : 2700,\r\n    \"destinationId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/holidays",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"holidays"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bankAccounts",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fromBankAccountId\" : 1,\r\n    \"toBankAccountId\" : 7,\r\n    \"amount\" : 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bankAccounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bankAccounts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
