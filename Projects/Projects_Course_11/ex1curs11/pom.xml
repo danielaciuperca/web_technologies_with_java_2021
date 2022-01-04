@@ -12,7 +12,7 @@
     <artifactId>ex1curs11</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ex1curs11</name>
-    <description>Unit tests with JUnit 5 and Mockito</description>
+    <description>Integration tests</description>
 
     <properties>
         <java.version>11</java.version>
@@ -49,21 +49,24 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>4.0.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-junit-jupiter</artifactId>
-            <version>3.3.3</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <!-- tests dependencies-->
 
     </dependencies>

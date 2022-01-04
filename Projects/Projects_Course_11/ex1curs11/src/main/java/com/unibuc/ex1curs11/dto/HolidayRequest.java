@@ -1,7 +1,6 @@
 package com.unibuc.ex1curs11.dto;
 
 import com.unibuc.ex1curs11.model.*;
-import io.swagger.annotations.*;
 
 import javax.validation.constraints.*;
 
