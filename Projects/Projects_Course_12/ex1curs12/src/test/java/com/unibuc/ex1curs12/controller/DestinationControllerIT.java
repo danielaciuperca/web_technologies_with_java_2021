@@ -37,6 +37,7 @@ public class DestinationControllerIT {
                         .contentType("application/json")
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.name").value(request.getName()));
+                .andExpect(jsonPath("$.name").value(request.getName()))
+                .andExpect(jsonPath("$.country").value(request.getCountry()));
     }
 }
